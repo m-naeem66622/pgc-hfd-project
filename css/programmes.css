@@ -1,0 +1,279 @@
+#content {
+	position: relative;
+	height: 625px;
+}
+
+#content::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: url("../PGC_Stock/sldier-bg-gradient.jpg") center center/cover
+		no-repeat;
+	background-attachment: fixed;
+	z-index: -1;
+}
+
+#content {
+	background: url("../PGC_Stock/slide-bg.png");
+	background-repeat: no-repeat;
+	/* background-size: cover; */
+	background-attachment: fixed;
+	background-size: 900px;
+	background-position: bottom right;
+}
+
+#content div {
+	position: absolute;
+	left: 5%;
+	top: 20%;
+	display: flex;
+	flex-direction: column;
+}
+
+#content span h1 {
+	text-transform: uppercase;
+	/* font-size: 4rem; */
+	font-size: clamp(25px, 5vw, 70px);
+	line-height: 1;
+}
+
+.para {
+	margin-top: 5px;
+	font-size: 1.3rem;
+}
+
+.btn {
+	margin-top: 5px;
+	color: var(--blue-color);
+	padding: 5px 5px;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: 700;
+	background-color: var(--white-color);
+	border: none;
+	border-radius: 5px;
+	font-size: 1.5rem;
+	width: 150px;
+}
+
+.btn:hover {
+	cursor: pointer;
+}
+
+#programmes > h1 {
+	margin: 40px 0;
+	font-family: var(--font-semi-bold);
+	text-align: center;
+}
+
+#programmes > h1 span:first-child {
+	font-size: clamp(25px, 5vw, 70px);
+	color: var(--red-color);
+}
+
+#programmes > h1 span:last-child {
+	font-size: clamp(19px, 4vw, 60px);
+	color: var(--white-color);
+}
+
+#programmes > .container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+#programmes a {
+	text-decoration: none;
+}
+
+.box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 320px;
+	height: 330px;
+	background-color: var(--white-color);
+	border-radius: 15px;
+	border-left: 8px solid var(--red-color);
+	margin: 20px;
+
+	cursor: pointer;
+}
+
+.box > div {
+	text-align: center;
+}
+
+.box img {
+	width: 135px;
+}
+
+.box h2 {
+	font-family: var(--font-semi-bold);
+	color: var(--blue-color);
+	margin-top: 50px;
+	text-align: left;
+}
+
+.box h2::after {
+	content: "";
+	display: block;
+	width: 20%;
+	height: 4px;
+	background-color: var(--red-color);
+	border-radius: 25px;
+	z-index: 1;
+	transition: 1s ease;
+}
+
+.box:hover h2::after {
+	width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+	#content {
+		background-size: 750px;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	#content {
+		background-size: 600px;
+	}
+}
+
+/* Disciplines CSS Styling */
+p {
+	text-align: justify;
+}
+
+.poster {
+	width: 100%;
+}
+
+.poster img {
+	width: 100%;
+}
+
+.discipline-details > .discipline:first-child {
+	line-height: 0.9;
+	margin-top: 50px;
+	font-size: 5rem;
+	color: var(--white-color);
+}
+
+.discipline:nth-child(2) {
+	margin-top: 0px;
+	font-size: 4.8rem;
+}
+
+.discipline-details > .temp {
+	margin-left: 15px;
+}
+
+.temp h3.temp {
+	font-size: 1.55rem;
+}
+
+.discipline-details,
+.FAQs {
+	padding: 0 40px;
+}
+
+.discipline-details h1,
+.discipline-details h3,
+.FAQs h1 {
+	color: var(--red-color);
+	font-size: 1.7rem;
+	font-family: var(--font-semi-bold);
+	margin: 50px 0 10px;
+}
+
+.discipline-details li,
+.FAQs li {
+	margin: 5px 0 5px 30px;
+}
+
+.FAQs .question-box {
+	position: relative;
+	border: 2px solid var(--white-color);
+	border-radius: 8px;
+	margin: 10px 0;
+	padding: 20px;
+	padding-right: 80px;
+	width: 95%;
+	/* height: 60px; */
+	/* overflow: hidden; */
+	/* transition: all 0.5s ease-in-out; */
+}
+
+.FAQs .question-box.active {
+	height: 100%;
+}
+
+.question-box img {
+	width: 22px;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	filter: invert(1);
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+
+.FAQs h3 {
+	margin-bottom: 10px;
+	font-size: 1rem;
+}
+
+.discipline-details h1,
+.discipline-details h2,
+.discipline-details h3,
+.FAQs h1,
+.FAQs h3 {
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 425px) {
+	section li,
+	p,
+	h3.question {
+		font-size: 0.9rem !important;
+	}
+
+	.discipline-details h1,
+	.discipline-details h3,
+	.FAQs h1 {
+		font-size: 1.5rem !important;
+	}
+
+	.discipline-details,
+	.FAQs {
+		padding: 0 30px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.box {
+		width: 265px;
+		height: 270px;
+	}
+
+	section li,
+	p,
+	h3.question {
+		font-size: 0.85rem !important;
+	}
+
+	.discipline-details h1,
+	.discipline-details h3,
+	.FAQs h1 {
+		font-size: 1.4rem !important;
+	}
+
+	.discipline-details,
+	.FAQs {
+		padding: 0 25px;
+	}
+}

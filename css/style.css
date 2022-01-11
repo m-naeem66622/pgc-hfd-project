@@ -1,0 +1,238 @@
+:root {
+	--blue-color: #2c2b6f;
+	--red-color: #e13a27;
+	--white-color: #ffffff;
+	--font-light: GalanoGrotesque-Light;
+	--font-regular: GalanoGrotesque-Regular;
+	--font-medium: GalanoGrotesque-Medium;
+	--font-semi-bold: GalanoGrotesque-Semi-Bold;
+	--font-bold: GalanoGrotesque-Bold;
+	--section-height: 570px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+@font-face {
+	font-family: GalanoGrotesque-Light;
+	src: url("../galano-grotesque-alt-cufonfonts-webfont/GalanoGrotesqueLight.woff");
+}
+
+@font-face {
+	font-family: GalanoGrotesque-Regular;
+	src: url("../galano-grotesque-alt-cufonfonts-webfont/GalanoGrotesqueRegular.woff");
+}
+
+@font-face {
+	font-family: GalanoGrotesque-Semi-Bold;
+	src: url("../galano-grotesque-alt-cufonfonts-webfont/GalanoGrotesqueSemiBold.woff");
+}
+
+@font-face {
+	font-family: GalanoGrotesque-Medium;
+	src: url("../galano-grotesque-alt-cufonfonts-webfont/GalanoGrotesqueMedium.woff");
+}
+
+@font-face {
+	font-family: GalanoGrotesque-Bold;
+	src: url("../galano-grotesque-alt-cufonfonts-webfont/GalanoGrotesqueBold.woff");
+}
+
+* {
+	font-family: var(--font-regular);
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: var(--white-color);
+	background-color: var(--blue-color);
+}
+
+/* Styling Navbar */
+#header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+	transition: all 0.5s ease-in-out;
+}
+
+.navbar-active {
+	background-color: var(--white-color) !important;
+	position: fixed !important;
+}
+
+.navbar-active #nav-links a {
+	font-family: var(--font-medium) !important;
+	color: var(--blue-color);
+}
+
+.navbar-active .burger .line,
+.navbar-active .burger .line::before,
+.navbar-active .burger .line::after {
+	background-color: var(--blue-color);
+}
+
+#navbar {
+	background-color: transparent;
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 65px;
+	align-items: center;
+	justify-content: space-between;
+	min-width: 100%;
+}
+
+/* Styling Logo */
+#logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo {
+	margin: 0 10px;
+	width: 110px;
+}
+
+/* Styling Nav-Links */
+#nav-links {
+	display: flex;
+	list-style: none;
+}
+
+#nav-links a {
+	text-decoration: none;
+	color: var(--white-color);
+	display: block;
+}
+
+.nav-links {
+	font-size: clamp(13px, 5vw, 14px);
+	position: relative;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+/* Styling Social Links */
+#social-links {
+	margin-right: 5px;
+	display: flex;
+}
+.social-links {
+	margin: 0 5px;
+}
+
+.social-links img {
+	width: 25px;
+	transition: all 300ms ease;
+}
+
+.social-links img:hover {
+	transform: scale(1.5);
+}
+
+/* Styling Footer Start Here */
+
+#footer {
+	width: 100%;
+	background-color: var(--blue-color);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 7%;
+	padding-top: 65px;
+}
+
+#footer .upper-part {
+	display: flex;
+	justify-content: space-between;
+	height: 380px;
+}
+
+.upper-part .logo-and-details {
+	display: flex;
+	flex-direction: column;
+}
+
+.upper-part .logo {
+	width: 200px;
+	margin-bottom: 20px;
+}
+
+.logo-and-details > table .first-column:first-child {
+	padding-right: 20px;
+	text-transform: uppercase;
+	font-size: 17px;
+	font-weight: 700;
+}
+
+.logo-and-details > table td {
+	padding-top: 10px;
+}
+
+.upper-part .locations {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.upper-part .locations img {
+	width: 450px;
+}
+
+.upper-part .locations span {
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	width: 130px;
+	bottom: 20px;
+	font-weight: 700;
+	margin-top: 55px;
+}
+
+#footer .lower-part > div {
+	display: flex;
+	align-items: center;
+}
+#footer .lower-part img {
+	width: 30px;
+}
+
+#footer .lower-part #email > img {
+	width: 38px;
+}
+
+#footer .lower-part a {
+	margin: 0 10px;
+}
+
+#footer .lower-part > div:first-child {
+	margin-bottom: 10px;
+}
+
+#footer .lower-part > div:last-child {
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+
+.reveal {
+	position: relative;
+	transform: translateY(150px);
+	opacity: 0;
+	transition: all 1s ease;
+}
+
+.reveal.reveal-active {
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+button {
+	outline: none;
+}

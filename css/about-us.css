@@ -1,0 +1,552 @@
+:root {
+	--slide-width: 750px;
+	--slide-height: 450px;
+	--navigation-position: 20px;
+}
+
+/* Home Section CSS Start */
+
+#home {
+	height: 100vh;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+#home::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url("../PGC_Stock/pgchfd.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+	background-attachment: fixed;
+	z-index: -1;
+	opacity: 0.7;
+}
+
+#home .main {
+	text-transform: uppercase;
+	font-size: 1.3rem;
+	position: absolute;
+	top: 37%;
+	left: 6%;
+	line-height: 1;
+}
+
+#home .main h1:nth-child(1),
+#home .main h1:nth-child(2),
+#home .main h1:nth-child(4),
+#home .main h1:nth-child(5) {
+	font-family: var(--font-light);
+}
+
+#home .main h1:nth-child(1) {
+	letter-spacing: 2px;
+}
+
+#home .main h1:nth-child(3) {
+	font-size: 2.8rem;
+}
+
+#home .main h1:nth-child(4) {
+	margin-top: 70px;
+}
+#home .main h1:nth-child(5) {
+	letter-spacing: 2.6px;
+}
+#home .main h1:nth-child(6) {
+	font-size: 2.6rem;
+	letter-spacing: 1.5px;
+}
+
+#home span {
+	font-size: 1.2rem;
+}
+
+.swipe {
+	background-color: var(--red-color);
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	border-radius: 50%;
+	animation: pulse 1s infinite;
+	box-shadow: 0 0 0 0 rgb(225, 58, 39);
+	cursor: pointer;
+}
+
+@keyframes pulse {
+	to {
+		box-shadow: 0px 0px 0px 15px rgba(225, 58, 39, 0.02);
+	}
+}
+
+.swipe img {
+	width: 20px;
+	position: absolute;
+	filter: invert(99%) sepia(2%) saturate(626%) hue-rotate(314deg)
+		brightness(118%) contrast(100%);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* Home Sectoin CSS End */
+
+/* Team Section CSS Start */
+
+/* #team {
+	position: relative;
+} */
+
+.slider {
+	width: var(--slide-width);
+	height: var(--slide-height);
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: var(--red-color);
+	position: relative;
+}
+
+#team .slides {
+	width: 500%;
+	height: var(--slide-height);
+	display: flex;
+	position: relative;
+}
+
+input {
+	display: none;
+}
+
+.slide {
+	width: 20%;
+	transition: 1.5s;
+	display: flex;
+}
+
+.slide .intro {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0 40px;
+}
+
+.slide .intro > img {
+	width: 280px;
+	border-radius: 50%;
+	margin-bottom: 15px;
+}
+
+.slide .intro h1,
+.slide .intro p {
+	text-align: center;
+}
+
+.slide .more-button {
+	display: none;
+}
+
+.slide .detail {
+	padding: 0 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.slide .detail h1 {
+	text-transform: uppercase;
+	font-family: var(--font-semi-bold);
+	line-height: 2rem;
+}
+
+.slide .detail h1:nth-child(1) {
+	color: var(--wite-color);
+	font-size: 30px;
+}
+
+.slide .detail h1:nth-child(2) {
+	color: var(--blue-color);
+	font-size: 40px;
+}
+
+.slide .detail p {
+	text-align: justify;
+	padding-top: 25px;
+}
+
+.balls {
+	width: var(--width);
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	bottom: 10%;
+}
+
+.balls div {
+	transition: all 0.5s;
+	border: 3px solid #fff;
+	padding: 6px;
+	border-radius: 50%;
+	margin-right: 15px;
+	cursor: pointer;
+}
+
+.balls div:hover {
+	background-color: #fff;
+}
+
+#team .slideCurrent {
+	transition: all 0.5s;
+	background-color: #fff;
+}
+
+.slide-section .reveal {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 545px;
+}
+
+.slide-section .reveal > div {
+	display: flex;
+	flex-direction: column;
+}
+
+.slide-section .reveal > h1 {
+	font-size: 2rem;
+	margin: 20px 0;
+}
+
+/* Team Section CSS End */
+
+/* History Section CSS Start */
+
+#history {
+	background-color: var(--red-color);
+}
+
+#history .slider {
+	background-color: var(--blue-color);
+}
+
+#history .reveal {
+	flex-direction: row-reverse;
+}
+
+#history .slides {
+	height: var(--slide-height);
+	position: relative;
+	width: 200%;
+	display: flex;
+}
+
+#history .slide {
+	width: 50%;
+	flex-direction: column;
+}
+
+#history .slide p {
+	padding-top: 10px;
+	font-size: 0.9rem;
+}
+
+#history .detail {
+	height: var(--slide-height);
+}
+
+#history .detail h1:nth-child(2) {
+	color: var(--red-color);
+}
+
+#history .detail h1:nth-child(3) {
+	padding-top: 20px;
+	font-size: 1.2rem;
+	font-family: var(--font-medium);
+	color: var(--red-color);
+}
+
+#history #current {
+	transition: all 2s;
+	background-color: violet;
+}
+
+#history .imgCurrent {
+	transition: all 0.5s;
+	background-color: #fff;
+}
+
+/* History Section CSS End */
+
+@media screen and (max-width: 1100px) {
+	.slide-section > .reveal {
+		flex-direction: column !important;
+		height: 650px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	:root {
+		--slide-width: 94vw;
+	}
+
+	#home .main {
+		top: 30%;
+	}
+
+	#home .main h1:nth-child(1),
+	#home .main h1:nth-child(2),
+	#home .main h1:nth-child(4),
+	#home .main h1:nth-child(5) {
+		font-size: 1.6rem;
+	}
+
+	#home .main h1:nth-child(1) {
+		letter-spacing: 1.7px;
+	}
+
+	#home .main h1:nth-child(2) {
+		letter-spacing: 0.4px;
+	}
+
+	#home .main h1:nth-child(3) {
+		font-size: 2.3rem;
+	}
+
+	#home .main h1:nth-child(5) {
+		letter-spacing: 2px;
+	}
+
+	#home .main h1:nth-child(6) {
+		font-size: 2.1rem;
+		letter-spacing: 1.5px;
+	}
+
+	.slide .detail {
+		padding: 0 15px 0 0;
+	}
+
+	.slide .intro {
+		padding: 0 20px;
+	}
+}
+
+@media screen and (max-width: 700px) and (min-width: 425px) {
+	#team {
+		overflow: hidden;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.slide-section .reveal > h1 {
+		margin: 10px 0;
+	}
+
+	/* #team,
+	#history,
+	.slide-section {
+		height: 100vh;
+	} */
+
+	#home .main h1:nth-child(1) {
+		letter-spacing: 1px;
+	}
+
+	#home .main h1:nth-child(1),
+	#home .main h1:nth-child(2),
+	#home .main h1:nth-child(4),
+	#home .main h1:nth-child(5) {
+		font-size: 1.3rem;
+	}
+
+	#home .main h1:nth-child(3) {
+		font-size: 1.8rem;
+	}
+
+	#home .main h1:nth-child(5) {
+		letter-spacing: 1.8px;
+	}
+
+	#home .main h1:nth-child(6) {
+		font-size: 1.7rem;
+		letter-spacing: 1.5px;
+	}
+
+	:root {
+		--slide-width: 95vw;
+		--slide-height: 385px;
+	}
+
+	.slide {
+		flex-direction: column;
+	}
+
+	.slide .intro {
+		height: var(--slide-height);
+		transition: 700ms;
+		padding: 0 25px;
+	}
+
+	.slide .intro > img {
+		width: 230px;
+		margin-top: 15px;
+	}
+
+	.slide-section {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.slide-section > .reveal {
+		height: 550px;
+	}
+
+	.slide .more-button {
+		display: block;
+		background-color: var(--white-color);
+		border-radius: 50%;
+		width: 25px;
+		height: 25px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 15px;
+		position: relative;
+	}
+
+	.slide .more-button > img {
+		width: 10px;
+	}
+
+	.slide .intro p {
+		min-height: 44px;
+	}
+
+	.slide .detail {
+		padding: 30px 15px;
+	}
+
+	.slide .detail p {
+		font-size: 15px;
+	}
+
+	#team .slide .hide-more {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	#team .slide .hide-more img {
+		transform: rotate(180deg);
+	}
+
+	#history .detail,
+	#history .slides,
+	#history .slider {
+		height: calc(var(--slide-height) + 70px);
+	}
+
+	#history > .reveal {
+		height: 600px;
+	}
+
+	#history .slide p {
+		font-size: 13.4px;
+	}
+
+	#history .slide .detail h1 {
+		line-height: 0.9;
+	}
+
+	#history .slide .detail h1:nth-child(1) {
+		font-size: 30px;
+	}
+
+	#history .slide .detail h1:nth-child(2) {
+		font-size: 40px;
+	}
+
+	#history .detail h1:nth-child(3) {
+		font-size: 22px;
+		padding-top: 10px;
+		line-height: 16px;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	#history .slide .detail h1:nth-child(1) {
+		font-size: 25px;
+	}
+
+	#history .slide .detail h1:nth-child(2) {
+		font-size: 30px;
+	}
+
+	#history .detail h1:nth-child(3) {
+		font-size: 18px;
+	}
+
+	#history .slide p {
+		font-size: 12.5px;
+	}
+
+	#history .reveal > h1 {
+		font-size: 2rem;
+		margin: 0px 0;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	#history .detail,
+	#history .slides,
+	#history .slider {
+		height: calc(var(--slide-height) + 128px);
+	}
+
+	#team .slide .detail {
+		padding: 25px 15px;
+	}
+
+	#team .slide .detail p {
+		padding-top: 14px;
+	}
+
+	#team .slide .detail p {
+		font-size: 14.5px;
+	}
+
+	#history.slide-section .reveal {
+		height: 650px;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	#team .slide .detail p {
+		font-size: 14px;
+	}
+
+	.slide-section .reveal > h1 {
+		font-size: 1.7rem;
+	}
+
+	.logo-and-details > table .first-column:first-child {
+		font-size: 13px;
+	}
+
+	#history .slide .detail p {
+		font-size: 14px;
+		padding-top: 15px;
+	}
+
+	#history .slide .detail h1:nth-child(1) {
+		font-size: 26px;
+	}
+
+	#history .slide .detail h1:nth-child(2) {
+		font-size: 35px;
+	}
+}

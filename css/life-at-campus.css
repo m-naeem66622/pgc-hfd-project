@@ -1,0 +1,87 @@
+.content > div {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.content h1 {
+	text-transform: uppercase;
+	color: var(--red-color);
+}
+
+.content > h1 {
+	font-size: 4rem;
+	font-family: var(--font-medium);
+	padding-top: 70px;
+	text-align: center;
+}
+
+.left,
+.right {
+	width: 37%;
+}
+
+.left h1,
+.right h1 {
+	font-size: 1.9rem;
+	font-family: var(--font-semi-bold);
+	line-height: 1;
+	margin-bottom: 10px;
+	margin-top: 50px;
+}
+
+.left p,
+.right p {
+	text-align: justify;
+	margin-bottom: 10px;
+	font-size: 1.1rem;
+}
+
+.left img,
+.right img {
+	margin-top: 10px;
+	width: 100%;
+	border-radius: 10px;
+}
+
+.left h1,
+.right h1 {
+	font-size: 2.3rem;
+}
+
+@media screen and (max-width: 768px) {
+	.content > div {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.content > h1 {
+		font-size: 3rem;
+	}
+
+	.left,
+	.right {
+		width: 90%;
+	}
+
+	.left h1,
+	.right h1 {
+		font-size: 2.5rem;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.content > h1 {
+		font-size: 2.5rem;
+	}
+
+	.left h1,
+	.right h1 {
+		font-size: 2rem;
+	}
+
+	.left p,
+	.right p {
+		font-size: 1rem;
+	}
+}
