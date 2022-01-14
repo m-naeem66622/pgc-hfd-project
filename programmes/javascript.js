@@ -17,11 +17,14 @@ window.onscroll = () => {
 		document
 			.getElementById("youtube")
 			.setAttribute("src", "../PGC_Stock/LOGO/youtube-blue.png");
-		if (burgerOpen == true) {
-			document.querySelector(".burger .line").style.backgroundColor =
-				"transparent";
-		} else {
-			document.querySelector(".burger .line").style.backgroundColor = "#2c2b6f";
+		if (window.innerWidth < 700) {
+			if (burgerOpen == true) {
+				document.querySelector(".burger .line").style.backgroundColor =
+					"transparent";
+			} else {
+				document.querySelector(".burger .line").style.backgroundColor =
+					"#2c2b6f";
+			}
 		}
 	} else {
 		header.classList.remove("navbar-active");
@@ -37,11 +40,14 @@ window.onscroll = () => {
 		document
 			.querySelector(".navbar__logo")
 			.setAttribute("src", "../PGC_Stock/LOGO/logo.svg");
-		if (burgerOpen == true) {
-			document.querySelector(".burger .line").style.backgroundColor =
-				"transparent";
-		} else {
-			document.querySelector(".burger .line").style.backgroundColor = "#ffffff";
+		if (window.innerWidth < 700) {
+			if (burgerOpen == true) {
+				document.querySelector(".burger .line").style.backgroundColor =
+					"transparent";
+			} else {
+				document.querySelector(".burger .line").style.backgroundColor =
+					"#ffffff";
+			}
 		}
 	}
 };
