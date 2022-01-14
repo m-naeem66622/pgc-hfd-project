@@ -70,12 +70,19 @@ function reveal() {
 		}
 	}
 }
-// Content Reveal Functionality End
 
-// Adding Active Class In Selected Tab
-//const list = document.querySelectorAll('.list');
-// function activelink() {
-// 	navLinks.forEach((item) => item.classList.remove("active"));
-// 	this.classList.add("active");
-// }
-// navLinks.forEach((item) => item.addEventListener("click", activelink));
+// For Updating Footer Contact Links
+
+document.addEventListener("DOMContentLoaded", () => {
+	var footerLinks = document.querySelectorAll(
+		".logo-and-details > table td:nth-child(2)"
+	);
+
+	footerLinks.forEach((element) => {
+		element.innerText = "";
+	});
+
+	footerLinks[0].innerHTML = `<a href="tel:0547-640107">(0547) 640107</a>`;
+	footerLinks[1].innerHTML = `<a href="mailto:pgchfd786@gmail.com">pgchfd786@gmail.com</a>`;
+	footerLinks[2].innerHTML = `<a href="https://complaint.pgc.edu">complaint.pgc.edu</a>`;
+});
