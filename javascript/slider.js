@@ -132,11 +132,6 @@ let teamSection = document.getElementById("team");
 let historySection = document.getElementById("history");
 
 window.onload = () => {
-	const swipe = document.querySelector(".swipe");
-	homeSectionHeight = window.innerHeight - 80;
-
-	swipe.style.top = `${homeSectionHeight}px`;
-
 	if (window.innerHeight < 560) {
 		slideSection.forEach((element) => {
 			element.style.height = "initial";
@@ -162,3 +157,10 @@ window.onresize = () => {
 		historySection.style.height = "initial";
 	}
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+	const swipe = document.querySelector(".swipe");
+	homeSectionHeight = window.innerHeight - 80;
+
+	swipe.style.top = `${homeSectionHeight}px`;
+});
