@@ -166,7 +166,7 @@ body {
 	margin-bottom: 20px;
 }
 
-.logo-and-details > table .first-column:first-child {
+.logo-and-details > table .first-column {
 	padding-right: 20px;
 	text-transform: uppercase;
 	font-size: 17px;
@@ -175,6 +175,17 @@ body {
 
 .logo-and-details > table td {
 	padding-top: 10px;
+}
+
+.logo-and-details > table td a {
+	text-decoration: none;
+	color: var(--white-color);
+	border-bottom: 2px solid transparent;
+}
+
+.logo-and-details > table td a:hover,
+.logo-and-details > table td a :active {
+	border-bottom-color: var(--white-color);
 }
 
 .upper-part .locations {

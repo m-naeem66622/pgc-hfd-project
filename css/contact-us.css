@@ -82,6 +82,21 @@ h1 {
 	color: var(--white-color);
 }
 
+.details div:nth-child(even) a:nth-child(2) p {
+	margin-bottom: 4px;
+}
+
+.details div:nth-child(odd) p,
+.details div:nth-child(even) a span {
+	border-bottom: 2px solid transparent;
+	width: fit-content;
+}
+
+.details div:nth-child(odd) a:hover p,
+.details div:nth-child(even) a span:hover {
+	border-bottom-color: var(--white-color);
+}
+
 #contact form {
 	display: flex;
 	flex-direction: column;
@@ -180,21 +195,6 @@ form button:focus {
 	#contact .container {
 		width: 85%;
 	}
-	/* #contact .glass {
-		top: 45%;
-		height: 68%;
-		justify-content: center;
-		flex-direction: column;
-	}
-
-	#contact form {
-		width: 60%;
-		margin-top: 10px;
-	}
-
-	#contact form label {
-		font-size: 0.9rem;
-	} */
 }
 
 @media screen and (max-width: 575px) {
@@ -218,25 +218,4 @@ form button:focus {
 		border-bottom-right-radius: 12px;
 		border-bottom-left-radius: 12px;
 	}
-
-	/* .complaint h1 {
-		font-size: 1.4rem;
-	} */
-	/* #contact form {
-		width: 85%;
-	}
-
-	#contact .contact > h1 {
-		font-size: 1.5rem;
-	}
-
-	#contact .contact > p {
-		font-size: 0.7rem;
-	} */
-}
-
-@media screen and (max-width: 375px) {
-	/* #contact .glass {
-		width: 90%;
-	} */
 }
